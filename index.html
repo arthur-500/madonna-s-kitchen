@@ -117,20 +117,21 @@
                     </div>
                 </div>
 
-                <!-- Desktop Links (Fixed for medium screens by changing md:flex to lg:flex) -->
-                <div class="hidden lg:flex space-x-6 items-center font-medium text-sm text-zinc-300">
-                    <a href="#home" class="hover:text-gold-400 transition">Home</a>
-                    <a href="#about" class="hover:text-gold-400 transition">About Us</a>
-                    <a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition">Menu</a>
-                    <a href="#catering" class="hover:text-gold-400 transition">Catering</a>
-                    <a href="#gallery" class="hover:text-gold-400 transition">Gallery</a>
-                    <a href="#testimonials" class="hover:text-gold-400 transition">Testimonials</a>
-                    <a href="#contact" class="hover:text-gold-400 transition">Contact</a>
+                <!-- Desktop Links (Fixed spacing and font scaling for large screens) -->
+                <div class="hidden lg:flex space-x-3 xl:space-x-5 items-center font-medium text-xs xl:text-sm text-zinc-300">
+                    <a href="#home" class="hover:text-gold-400 transition whitespace-nowrap">Home</a>
+                    <a href="#about" class="hover:text-gold-400 transition whitespace-nowrap">About Us</a>
+                    <a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition whitespace-nowrap">Menu</a>
+                    <a href="#catering" class="hover:text-gold-400 transition whitespace-nowrap">Catering</a>
+                    <a href="#booking" class="hover:text-gold-400 transition whitespace-nowrap">Book Appointment</a>
+                    <a href="#gallery" class="hover:text-gold-400 transition whitespace-nowrap">Gallery</a>
+                    <a href="#testimonials" class="hover:text-gold-400 transition whitespace-nowrap">Testimonials</a>
+                    <a href="#contact" class="hover:text-gold-400 transition whitespace-nowrap">Contact</a>
                 </div>
 
                 <!-- Right Side: Phone & Cart -->
-                <div class="flex items-center space-x-4">
-                    <a href="tel:+244241645782" class="hidden lg:flex items-center space-x-2 text-zinc-300 hover:text-gold-400 font-semibold text-sm">
+                <div class="flex items-center space-x-3">
+                    <a href="tel:+244241645782" class="hidden xl:flex items-center space-x-2 text-zinc-300 hover:text-gold-400 font-semibold text-xs">
                         <i class="fa-solid fa-phone text-gold-400"></i>
                         <span>+244 24 164 5782</span>
                     </a>
@@ -141,7 +142,7 @@
                         <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-gold-400 text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
                     </button>
 
-                    <!-- Mobile Hamburger Button (Fixed for medium screens by changing md:hidden to lg:hidden) -->
+                    <!-- Mobile Hamburger Button -->
                     <div class="lg:hidden flex items-center">
                         <button id="hamburger-btn" onclick="toggleMobileMenu()" class="bg-zinc-900 hover:bg-zinc-800 text-gold-400 w-11 h-11 rounded-2xl flex items-center justify-center transition border border-zinc-800 focus:outline-none shadow-lg">
                             <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
@@ -151,7 +152,7 @@
             </div>
         </div>
 
-        <!-- Enhanced Mobile Full-Screen Overlay Menu with Close Button & Icons -->
+        <!-- Enhanced Mobile Full-Screen Overlay Menu -->
         <div id="mobile-menu" class="fixed inset-x-0 top-0 h-screen bg-[#0b0b0c] backdrop-blur-xl border-b border-zinc-800 px-6 py-8 flex flex-col justify-between z-50 overflow-y-auto">
             <div>
                 <!-- Top Header inside mobile overlay with Close Button -->
@@ -193,6 +194,12 @@
                             <i class="fa-solid fa-plate-wheat text-sm"></i>
                         </div>
                         <span>Catering Services</span>
+                    </a>
+                    <a href="#booking" onclick="toggleMobileMenu()" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
+                        <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
+                            <i class="fa-solid fa-calendar-check text-sm"></i>
+                        </div>
+                        <span>Book Appointment</span>
                     </a>
                     <a href="#gallery" onclick="toggleMobileMenu()" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
                         <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
@@ -245,7 +252,7 @@
             </h1>
             <p class="text-xs sm:text-base lg:text-lg text-zinc-300 mb-8 font-normal max-w-xl text-left leading-relaxed">Local and Continental dishes, tasty snacks, and irresistible pastries for every occasion.</p>
             
-            <div class="flex flex-col sm:flex-row gap-4 max-w-full mb-12 items-start justify-start w-full">
+            <div class="flex flex-col sm:flex-row gap-4 max-w-full mb-12 items-center justify-center w-full">
                 <a href="#menu" onclick="shrinkHero()" class="bg-gold-400 hover:bg-gold-500 text-black font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-gold-400/20 transition flex items-center justify-center space-x-2.5 text-xs tracking-wider uppercase w-full sm:w-auto">
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>ORDER ON WHATSAPP</span>
@@ -343,13 +350,67 @@
         </div>
     </section>
 
+    <!-- BOOK APPOINTMENT SECTION -->
+    <section id="booking" class="bg-cardBg py-24 px-4 border-y border-zinc-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Reserve Your Spot</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Book an Appointment or Table</h2>
+                <p class="text-zinc-400 max-w-xl mx-auto text-base">Fill out the form below to book your service or reservation instantly via WhatsApp.</p>
+            </div>
+
+            <div class="bg-darkBg border border-zinc-800 rounded-3xl p-6 sm:p-10 shadow-xl">
+                <form id="appointment-form" onsubmit="submitAppointment(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Your Full Name</label>
+                            <input type="text" id="appt-name" required placeholder="e.g. Ama Serwaa" class="w-full bg-cardBg border border-zinc-700 rounded-2xl px-4 py-3.5 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Phone Number</label>
+                            <input type="tel" id="appt-phone" required placeholder="e.g. +233 24 000 0000" class="w-full bg-cardBg border border-zinc-700 rounded-2xl px-4 py-3.5 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Type of Service</label>
+                            <select id="appt-service" required class="w-full bg-cardBg border border-zinc-700 rounded-2xl px-4 py-3.5 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400">
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="Dine-In Table Reservation">Dine-In Table Reservation</option>
+                                <option value="Private Event Catering">Private Event Catering</option>
+                                <option value="Wedding Catering">Wedding Catering</option>
+                                <option value="Corporate Event Booking">Corporate Event Booking</option>
+                                <option value="Special Party / Outdooring">Special Party / Outdooring</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Date & Time</label>
+                            <input type="datetime-local" id="appt-datetime" required class="w-full bg-cardBg border border-zinc-700 rounded-2xl px-4 py-3.5 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Additional Notes / Requests</label>
+                        <textarea id="appt-notes" rows="4" placeholder="Tell us about guest count, specific food choices, or special arrangements..." class="w-full bg-cardBg border border-zinc-700 rounded-2xl px-4 py-3.5 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-4 rounded-2xl transition duration-200 shadow-xl shadow-gold-400/20 flex items-center justify-center space-x-2.5 text-sm uppercase tracking-wider">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Book Now</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- MENU SECTION -->
     <section id="menu" class="bg-cardBg py-24 px-4 border-y border-zinc-800">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Our Gastronomy</span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Explore Our Menu Selection</h2>
-                <p class="text-zinc-400 max-w-xl mx-auto text-base">All items are billed at exact standard menu pricing with zero discounts applied.</p>
+                <p class="text-zinc-400 max-w-xl mx-auto text-base">All items are billed in Ghanaian Cedis (GH₵) at exact standard menu pricing with zero discounts applied.</p>
             </div>
 
             <!-- Interactive Category Tabs -->
@@ -366,7 +427,7 @@
                 <!-- Item 1: Palava Sauce -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Palava sauce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/palava sauce kontomire.png" alt="Palava sauce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Signature</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -377,8 +438,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-1-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Palava sauce', 'dish-1-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -392,7 +453,7 @@
                 <!-- Item 2: Chicken wings stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=600&q=80" alt="Chicken wings stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/chicken wing stew.png" alt="Chicken wings stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Local Special</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -403,8 +464,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-2-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Chicken wings stew', 'dish-2-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -418,7 +479,7 @@
                 <!-- Item 3: Cassava Fish Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Cassava fish stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/cassava fish stew.png" alt="Cassava fish stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Crispy Snack</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -429,8 +490,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-3-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Cassava Fish stew', 'dish-3-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -444,7 +505,7 @@
                 <!-- Item 4: Red Fish Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Red fish stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/red fish stew.png" alt="Red fish stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Traditional</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -455,8 +516,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-4-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family Bowl" data-price="530.00">Family Bowl ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family Bowl" data-price="530.00">Family Bowl (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Red fish stew', 'dish-4-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -470,7 +531,7 @@
                 <!-- Item 5: Turkey Wings Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1626509809490-67c54158e0a6?auto=format&fit=crop&w=600&q=80" alt="Turkey wings stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/turkey wings stew.png" alt="Turkey wings stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Popular</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -481,8 +542,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-5-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Large" data-price="530.00">Large ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Large" data-price="530.00">Large (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Turkey wings stew', 'dish-5-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -496,7 +557,7 @@
                 <!-- Item 6: Fante Fante -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Fante Fante" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/fant fante stew.png" alt="Fante Fante" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Seafood</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -507,8 +568,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-6-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Fante fante', 'dish-6-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -522,7 +583,7 @@
                 <!-- Item 7: Corned Beef Vegetable Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Corned Beef vegetable stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/corned beef stew.png" alt="Corned Beef vegetable stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Stew</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -533,8 +594,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-7-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Corned beef vegetable stew', 'dish-7-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -548,7 +609,7 @@
                 <!-- Item 8: Beef Vegetable Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Beef vegetable stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/vegetable beef stew.png" alt="Beef vegetable stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Hearty</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -559,8 +620,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-8-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Beef vegetable stew', 'dish-8-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -574,7 +635,7 @@
                 <!-- Item 9: Koobi Salmon Egg Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80" alt="Koobi Salmon egg stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/koobi stew.png" alt="Koobi Salmon egg stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Local Delicacy</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -585,8 +646,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-9-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('koobi salmon egg stew', 'dish-9-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -600,7 +661,7 @@
                 <!-- Item 10: Gizzard Cabbage Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Gizzard cabbage stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/gizzard spicy sauce.png" alt="Gizzard cabbage stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Specialty</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -611,8 +672,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-10-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Gizzard cabbage stew', 'dish-10-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -626,7 +687,7 @@
                 <!-- Item 11: Goat Meat Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Goat meat stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/goat meat stew.png" alt="Goat meat stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Premium</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -637,8 +698,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-11-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Goat meat stew', 'dish-11-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -652,7 +713,7 @@
                 <!-- Item 12: Garden Eggs Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Garden eggs stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/garden egg stew.png" alt="Garden eggs stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Local Favourite</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -663,8 +724,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-12-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Garden agg stew', 'dish-12-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -678,7 +739,7 @@
                 <!-- Item 13: Spicy Gizzard Sauce -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="snacks">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=600&q=80" alt="Spicy gizzard sauce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/gizzard spicy sauce.png" alt="Spicy gizzard sauce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Spicy</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -689,8 +750,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-13-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Spicy gizzard sauce', 'dish-13-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -704,7 +765,7 @@
                 <!-- Item 14: Beans Stew / Aboboi -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="snacks">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Beans stew/Aboboi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/beans stew.png" alt="Beans stew/Aboboi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Healthy</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -715,8 +776,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-14-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Bean stew/Aboboi', 'dish-14-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -730,7 +791,7 @@
                 <!-- Item 15: Vegetable Stew Only -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="snacks">
                     <div class="relative overflow-hidden h-36 sm:h-56">
-                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Vegetable Stew Only" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="img/vegetable only stew.png" alt="Vegetable Stew Only" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Vegetarian</span>
                     </div>
                     <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
@@ -741,8 +802,8 @@
                             <div class="flex flex-col sm:flex-row items-center justify-between bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1 sm:gap-0">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-15-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1 sm:py-1.5 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full sm:w-auto">
-                                    <option value="Regular" data-price="310.00" selected>Regular ($310.00)</option>
-                                    <option value="Family" data-price="530.00">Family ($530.00)</option>
+                                    <option value="Regular" data-price="310.00" selected>Regular (GH₵ 310.00)</option>
+                                    <option value="Family" data-price="530.00">Family (GH₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('vegetable stew only', 'dish-15-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -766,54 +827,54 @@
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Coca Cola</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">$3.50</span>
+                            <span class="text-gold-400 font-extrabold text-sm">GH₵ 35.00</span>
                         </div>
-                        <button onclick="addToCart('Coca Cola', 'Standard', 3.50)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
+                        <button onclick="addToCart('Coca Cola', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
 
                     <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Fanta</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">$3.50</span>
+                            <span class="text-gold-400 font-extrabold text-sm">GH₵ 35.00</span>
                         </div>
-                        <button onclick="addToCart('Fanta', 'Standard', 3.50)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
+                        <button onclick="addToCart('Fanta', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
 
                     <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Sprite</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">$3.50</span>
+                            <span class="text-gold-400 font-extrabold text-sm">GH₵ 35.00</span>
                         </div>
-                        <button onclick="addToCart('Sprite', 'Standard', 3.50)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
+                        <button onclick="addToCart('Sprite', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
 
                     <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Malt</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">$4.00</span>
+                            <span class="text-gold-400 font-extrabold text-sm">GH₵ 40.00</span>
                         </div>
-                        <button onclick="addToCart('Malt', 'Standard', 4.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
+                        <button onclick="addToCart('Malt', 'Standard', 40.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
 
                     <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Alvaro</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">$4.00</span>
+                            <span class="text-gold-400 font-extrabold text-sm">GH₵ 40.00</span>
                         </div>
-                        <button onclick="addToCart('Alvaro', 'Standard', 4.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
+                        <button onclick="addToCart('Alvaro', 'Standard', 40.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
 
                     <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-glass-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Mineral Water</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">$2.00</span>
+                            <span class="text-gold-400 font-extrabold text-sm">GH₵ 20.00</span>
                         </div>
-                        <button onclick="addToCart('Mineral Water', 'Standard', 2.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
+                        <button onclick="addToCart('Mineral Water', 'Standard', 20.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
                 </div>
             </div>
@@ -849,13 +910,13 @@
                 </div>
             </div>
             <div class="relative overflow-hidden rounded-3xl h-72 border border-zinc-800 group">
-                <img src="https://images.unsplash.com/photo-155539594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="img/gizzard spicy sauce.png" alt="Gallery 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                     <span class="text-white font-bold text-sm">Grill & Barbecue Specials</span>
                 </div>
             </div>
             <div class="relative overflow-hidden rounded-3xl h-72 border border-zinc-800 group">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Gallery 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <img src="img/fant fante stew.png" alt="Gallery 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                     <span class="text-white font-bold text-sm">Savory Pastries & Snacks</span>
                 </div>
@@ -919,10 +980,10 @@
                         <p class="text-zinc-700 text-sm leading-relaxed mb-6 italic">"Their stews and sauce choices are top-notch! I order meat portions regularly for my office meetings. Amazing customer service too."</p>
                     </div>
                     <div class="flex items-center space-x-3 pt-4 border-t border-zinc-200">
-                        <div class="w-10 h-10 bg-gold-400/20 text-gold-600 rounded-full flex items-center justify-center font-bold text-sm">MA</div>
+                        <div class="w-10 h-10 bg-gold-400/20 text-gold-600 rounded-full flex items-center justify-center font-bold text-sm">AA</div>
                         <div>
-                            <h4 class="font-bold text-zinc-900 text-sm">Maame Akosua</h4>
-                            <p class="text-zinc-500 text-xs">Food Blogger</p>
+                            <h4 class="font-bold text-zinc-900 text-sm">Akosua Adoma</h4>
+                            <p class="text-zinc-500 text-xs">Corporate Client</p>
                         </div>
                     </div>
                 </div>
@@ -930,183 +991,138 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-24 px-4 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Get in Touch</span>
-            <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Contact Us</h2>
-            <p class="text-zinc-400 max-w-xl mx-auto text-base">Have questions, feedback, or corporate catering inquiries? Reach out to us below.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-cardBg rounded-3xl p-8 shadow-sm border border-zinc-800 text-center hover:border-gold-400/50 transition">
-                <div class="w-16 h-16 bg-darkBg text-gold-400 border border-zinc-800 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
-                    <i class="fa-solid fa-phone"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2">Phone Support</h3>
-                <p class="text-zinc-400 text-sm mb-4">Call us directly for instant inquiries and orders.</p>
-                <a href="tel:+244241645782" class="text-gold-400 font-bold hover:underline">+244 24 164 5782</a>
-            </div>
-
-            <div class="bg-cardBg rounded-3xl p-8 shadow-sm border border-zinc-800 text-center hover:border-gold-400/50 transition">
-                <div class="w-16 h-16 bg-darkBg text-green-500 border border-zinc-800 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2">WhatsApp Chat</h3>
-                <p class="text-zinc-400 text-sm mb-4">Chat with our customer service team instantly.</p>
-                <a href="https://wa.me/244241645782" target="_blank" class="text-green-400 font-bold hover:underline">Chat on WhatsApp</a>
-            </div>
-
-            <div class="bg-cardBg rounded-3xl p-8 shadow-sm border border-zinc-800 text-center hover:border-gold-400/50 transition">
-                <div class="w-16 h-16 bg-darkBg text-blue-400 border border-zinc-800 rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-2">Location</h3>
-                <p class="text-zinc-400 text-sm mb-4">Visit our flagship location.</p>
-                <span class="text-blue-400 font-bold">Accra, Ghana</span>
-            </div>
-        </div>
-    </section>
-
     <!-- FOOTER -->
-    <footer class="bg-yellow-400 text-zinc-900 pt-20 pb-12 px-4 sm:px-6 lg:px-8 border-t-4 border-yellow-500 shadow-2xl mt-20 relative overflow-hidden">
-        <div class="absolute -right-20 -top-20 w-80 h-80 bg-white/20 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-amber-300/30 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 relative z-10">
-            <!-- Brand Info -->
-            <div class="space-y-5">
+    <footer id="contact" class="bg-darkBg text-zinc-400 py-16 px-4 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
                 <div class="flex items-center space-x-3">
-                    <span class="text-xl font-black tracking-wider text-black uppercase">MADONNA'S <span class="text-zinc-900 underline decoration-2">KITCHEN</span></span>
+                    <span class="text-lg font-black tracking-wider text-white uppercase">MADONNA'S KITCHEN</span>
                 </div>
-                <p class="text-zinc-900 text-sm font-medium leading-relaxed">Delicious food, exceptional service, and memorable moments. Proudly serving authentic local and continental dishes, snacks, and pastries across Ghana.</p>
+                <p class="text-xs leading-relaxed text-zinc-400">Serving authentic local and continental dishes, delicious snacks, and fresh pastries with fast WhatsApp ordering and premium event catering.</p>
                 <div class="flex space-x-3 pt-2">
-                    <a href="https://wa.me/244241645782" target="_blank" class="w-10 h-10 bg-black text-yellow-400 rounded-xl flex items-center justify-center hover:bg-zinc-800 transition shadow-md"><i class="fa-brands fa-whatsapp text-lg"></i></a>
-                    <a href="tel:+244241645782" class="w-10 h-10 bg-black text-yellow-400 rounded-xl flex items-center justify-center hover:bg-zinc-800 transition shadow-md"><i class="fa-solid fa-phone text-base"></i></a>
-                    <a href="#contact" class="w-10 h-10 bg-black text-yellow-400 rounded-xl flex items-center justify-center hover:bg-zinc-800 transition shadow-md"><i class="fa-solid fa-envelope text-base"></i></a>
+                    <a href="#" class="w-10 h-10 bg-cardBg hover:bg-gold-400 hover:text-black rounded-xl flex items-center justify-center transition border border-zinc-800 text-gold-400"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 bg-cardBg hover:bg-gold-400 hover:text-black rounded-xl flex items-center justify-center transition border border-zinc-800 text-gold-400"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    <a href="#" class="w-10 h-10 bg-cardBg hover:bg-gold-400 hover:text-black rounded-xl flex items-center justify-center transition border border-zinc-800 text-gold-400"><i class="fa-brands fa-whatsapp text-sm"></i></a>
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            <div class="space-y-4">
-                <h4 class="text-black font-extrabold text-sm uppercase tracking-[0.2em] relative inline-block pb-2 after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-black">Quick Links</h4>
-                <ul class="space-y-2.5 text-sm font-semibold">
-                    <li><a href="#home" class="text-zinc-900 hover:text-black hover:translate-x-1.5 inline-block transition duration-200">Home</a></li>
-                    <li><a href="#about" class="text-zinc-900 hover:text-black hover:translate-x-1.5 inline-block transition duration-200">About Us</a></li>
-                    <li><a href="#menu" class="text-zinc-900 hover:text-black hover:translate-x-1.5 inline-block transition duration-200">Our Menu</a></li>
-                    <li><a href="#catering" class="text-zinc-900 hover:text-black hover:translate-x-1.5 inline-block transition duration-200">Catering Services</a></li>
-                    <li><a href="#gallery" class="text-zinc-900 hover:text-black hover:translate-x-1.5 inline-block transition duration-200">Photo Gallery</a></li>
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-gold-400 transition">About Us</a></li>
+                    <li><a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition">Our Menu</a></li>
+                    <li><a href="#catering" class="hover:text-gold-400 transition">Catering Services</a></li>
+                    <li><a href="#booking" class="hover:text-gold-400 transition">Book Appointment</a></li>
                 </ul>
             </div>
 
-            <!-- Opening Hours -->
-            <div class="space-y-4">
-                <h4 class="text-black font-extrabold text-sm uppercase tracking-[0.2em] relative inline-block pb-2 after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-black">Opening Hours</h4>
-                <div class="bg-yellow-500/30 p-4 rounded-2xl border border-yellow-600/30 shadow-inner">
-                    <div class="flex items-center space-x-3 mb-2">
-                        <i class="fa-solid fa-clock text-black text-lg animate-pulse"></i>
-                        <span class="text-black font-black text-base uppercase tracking-wider">Always Open</span>
-                    </div>
-                    <p class="text-zinc-900 text-sm font-bold">Available 24 Hours a Day, 7 Days a Week for your absolute convenience!</p>
-                </div>
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact Info</h4>
+                <ul class="space-y-3 text-xs">
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-location-dot text-gold-400 mt-0.5"></i>
+                        <span>Accra, Ghana</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-phone text-gold-400"></i>
+                        <span>+244 24 164 5782</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <i class="fa-solid fa-envelope text-gold-400"></i>
+                        <span>orders@madonnaskitchen.com</span>
+                    </li>
+                </ul>
             </div>
 
-            <!-- Contact Summary -->
-            <div class="space-y-4">
-                <h4 class="text-black font-extrabold text-sm uppercase tracking-[0.2em] relative inline-block pb-2 after:absolute after:bottom-0 after:left-0 after:w-8 after:h-0.5 after:bg-black">Contact Info</h4>
-                <ul class="space-y-3 text-sm font-semibold text-zinc-900">
-                    <li class="flex items-start space-x-3">
-                        <i class="fa-solid fa-location-dot text-black mt-1"></i>
-                        <span>Accra, Greater Accra Region, Ghana</span>
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Working Hours</h4>
+                <ul class="space-y-2.5 text-xs">
+                    <li class="flex justify-between py-1 border-b border-zinc-800/60">
+                        <span>Monday - Saturday:</span>
+                        <span class="text-white font-semibold">8:00 AM - 10:00 PM</span>
                     </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fa-solid fa-phone text-black"></i>
-                        <a href="tel:+244241645782" class="hover:underline transition font-bold">+244 24 164 5782</a>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <i class="fa-solid fa-envelope text-black"></i>
-                        <span class="font-bold">info@madonnaskitchen.com</span>
+                    <li class="flex justify-between py-1 border-b border-zinc-800/60">
+                        <span>Sunday:</span>
+                        <span class="text-white font-semibold">12:00 PM - 10:00 PM</span>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto pt-8 border-t border-yellow-600/40 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-900 font-bold relative z-10 gap-4">
-            <p>&copy; 2026 Madonna's Kitchen. All Rights Reserved.</p>
-            <div class="flex items-center space-x-6">
-                <a href="#privacy" class="hover:underline transition">Privacy Policy</a>
-                <a href="#terms" class="hover:underline transition">Terms of Service</a>
-                <span>Designed for Excellence</span>
-            </div>
+        <div class="max-w-7xl mx-auto pt-8 border-t border-zinc-800 flex flex-col sm:flex-row justify-between items-center text-xs text-zinc-500">
+            <p>&copy; 2026 Madonna's Kitchen. All rights reserved.</p>
+            <p class="mt-2 sm:mt-0">Designed for Exceptional Taste & Quality</p>
         </div>
     </footer>
 
     <!-- CART SIDEBAR MODAL -->
-    <div id="cart-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex justify-end transition-opacity">
-        <div class="bg-cardBg w-full max-w-md h-full flex flex-col p-6 sm:p-8 shadow-2xl border-l border-zinc-800">
-            <div class="flex justify-between items-center border-b border-zinc-800 pb-5">
-                <div class="flex items-center space-x-2">
-                    <i class="fa-solid fa-cart-shopping text-gold-400"></i>
-                    <h3 class="text-xl font-black text-white tracking-tight">Your Cart</h3>
+    <div id="cart-sidebar" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div onclick="toggleCart()" class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-cardBg border-l border-zinc-800 flex flex-col justify-between">
+                
+                <!-- Cart Header -->
+                <div class="p-6 border-b border-zinc-800 flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center border border-gold-400/25">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-black uppercase text-base tracking-wider">Your Cart</h3>
+                            <p class="text-xs text-zinc-400">Exact full menu pricing applied</p>
+                        </div>
+                    </div>
+                    <button onclick="toggleCart()" class="w-10 h-10 bg-darkBg hover:bg-zinc-800 text-zinc-300 hover:text-gold-400 rounded-xl flex items-center justify-center transition border border-zinc-800">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
                 </div>
-                <button onclick="toggleCart()" class="w-10 h-10 bg-darkBg hover:bg-zinc-800 rounded-full flex items-center justify-center text-zinc-300 font-bold transition border border-zinc-800">&times;</button>
-            </div>
-            <div id="cart-items" class="flex-1 overflow-y-auto py-6 space-y-4">
-                <p class="text-zinc-500 text-center py-12 text-sm font-medium">Your cart is currently empty.</p>
-            </div>
-            <div class="border-t border-zinc-800 pt-6">
-                <div class="flex justify-between items-center mb-6">
-                    <span class="font-bold text-zinc-300">Total Amount:</span>
-                    <span id="cart-total" class="font-black text-2xl text-gold-400">$0.00</span>
+
+                <!-- Cart Items Container -->
+                <div id="cart-items" class="p-6 flex-1 overflow-y-auto space-y-4">
+                    <!-- Dynamic Cart Items Rendered Here -->
                 </div>
-                <button onclick="checkoutWhatsApp()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-2xl shadow-xl shadow-green-600/20 transition flex items-center justify-center space-x-3 text-base">
-                    <span>Order Now</span>
-                </button>
+
+                <!-- Cart Footer & Checkout -->
+                <div class="p-6 border-t border-zinc-800 bg-darkBg space-y-4">
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs text-zinc-400">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal" class="font-bold text-white">GH₵ 0.00</span>
+                        </div>
+                        <div class="flex justify-between text-base font-black text-white pt-2 border-t border-zinc-800">
+                            <span>Total Amount</span>
+                            <span id="cart-total" class="text-gold-400">GH₵ 0.00</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <button onclick="checkoutWhatsApp()" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-4 rounded-2xl transition shadow-lg shadow-gold-400/20 flex items-center justify-center space-x-2.5 text-sm uppercase tracking-wider">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Checkout via WhatsApp</span>
+                        </button>
+                        <button onclick="clearCart()" class="w-full bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white font-bold py-3 rounded-2xl transition border border-zinc-800 text-xs uppercase tracking-wider">
+                            Clear Cart
+                        </button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Smooth Scrolling & Fade-Out / Slide-In Effect for Section Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    
-                    // Trigger fade-out and slide-in transition class
-                    targetElement.classList.remove('page-transition');
-                    void targetElement.offsetWidth; // Force reflow to restart animation
-                    targetElement.classList.add('page-transition');
-
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Hero Slider
-        let currentSlide = 0;
+        // Hero background slider
         const slides = document.querySelectorAll('.hero-slide');
+        let currentSlide = 0;
         setInterval(() => {
             slides[currentSlide].classList.remove('active');
             currentSlide = (currentSlide + 1) % slides.length;
             slides[currentSlide].classList.add('active');
-        }, 3500);
+        }, 5000);
 
-        // Shrink Hero Section to 40vh on Menu Click
-        function shrinkHero() {
-            const hero = document.getElementById('home');
-            hero.classList.remove('min-h-screen');
-            hero.classList.add('h-[40vh]', 'min-h-[40vh]');
-        }
-
-        // Mobile Menu Toggle (Full Overlay with Open/Close states)
+        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
             const icon = document.getElementById('hamburger-icon');
@@ -1114,39 +1130,32 @@
             if (menu.classList.contains('open')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-xmark');
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                document.body.style.overflow = 'hidden';
             } else {
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
-                document.body.style.overflow = 'auto'; // Restore scrolling
+                document.body.style.overflow = 'auto';
             }
         }
 
-        // Menu Filtering
+        // Menu filtering
         function filterMenu(category) {
-            const tabs = document.querySelectorAll('.menu-tab');
-            tabs.forEach(tab => {
-                tab.classList.remove('bg-gold-400', 'text-black', 'shadow-md');
-                tab.classList.add('bg-darkBg', 'text-zinc-300', 'border', 'border-zinc-800');
-            });
-            const activeBtn = document.getElementById(`btn-${category}`);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-darkBg', 'text-zinc-300', 'border', 'border-zinc-800');
-                activeBtn.classList.add('bg-gold-400', 'text-black', 'shadow-md');
-            }
-
             const items = document.querySelectorAll('.menu-item');
-            const drinksSection = document.getElementById('drinks-section');
+            const tabs = document.querySelectorAll('.menu-tab');
+            
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-gold-400', 'text-black', 'font-extrabold', 'shadow-md');
+                tab.classList.add('bg-darkBg', 'text-zinc-300', 'font-bold', 'border', 'border-zinc-800');
+            });
 
-            if (category === 'drinks') {
-                if (drinksSection) drinksSection.style.display = 'block';
-            } else {
-                if (drinksSection) drinksSection.style.display = 'block';
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-darkBg', 'text-zinc-300', 'border', 'border-zinc-800');
+                activeBtn.classList.add('bg-gold-400', 'text-black', 'font-extrabold', 'shadow-md');
             }
 
             items.forEach(item => {
-                const itemCat = item.getAttribute('data-category');
-                if (category === 'all' || itemCat === category) {
+                if(category === 'all' || item.getAttribute('data-category') === category) {
                     item.style.display = 'flex';
                 } else {
                     item.style.display = 'none';
@@ -1154,105 +1163,135 @@
             });
         }
 
-        // Cart Management
+        function shrinkHero() {
+            // Optional helper when clicking menu anchors
+        }
+
+        // Cart Data State
         let cart = [];
 
         function toggleCart() {
-            document.getElementById('cart-modal').classList.toggle('hidden');
+            const sidebar = document.getElementById('cart-sidebar');
+            sidebar.classList.toggle('hidden');
         }
 
-        function addToCart(name, size, price) {
-            const exactPrice = parseFloat(price);
-            const existingItem = cart.find(item => item.name === name && item.size === size && item.price === exactPrice);
-            
-            if (existingItem) {
-                existingItem.quantity += 1;
+        function addToCart(name, portion, price) {
+            const existingIndex = cart.findIndex(item => item.name === name && item.portion === portion);
+            if(existingIndex > -1) {
+                cart[existingIndex].qty += 1;
             } else {
-                cart.push({ name, size, price: exactPrice, quantity: 1 });
+                cart.push({ name, portion, price, qty: 1 });
+            }
+            updateCartUI();
+            toggleCart();
+        }
+
+        function addCustomToCart(name, selectId) {
+            const select = document.getElementById(selectId);
+            const selectedOption = select.options[select.selectedIndex];
+            const portion = selectedOption.value;
+            const price = parseFloat(selectedOption.getAttribute('data-price'));
+            addToCart(name, portion, price);
+        }
+
+        function updateQuantity(index, change) {
+            cart[index].qty += change;
+            if(cart[index].qty <= 0) {
+                cart.splice(index, 1);
             }
             updateCartUI();
         }
 
-        function addCustomToCart(itemName, selectId) {
-            const selectElement = document.getElementById(selectId);
-            const selectedOption = selectElement.options[selectElement.selectedIndex];
-            const size = selectedOption.value;
-            const price = parseFloat(selectedOption.getAttribute('data-price'));
-            
-            addToCart(itemName, size, price);
+        function clearCart() {
+            cart = [];
+            updateCartUI();
         }
 
         function updateCartUI() {
-            const cartItemsContainer = document.getElementById('cart-items');
-            const cartCount = document.getElementById('cart-count');
-            const cartTotal = document.getElementById('cart-total');
+            const countEl = document.getElementById('cart-count');
+            const itemsEl = document.getElementById('cart-items');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const totalEl = document.getElementById('cart-total');
 
-            let totalCount = 0;
-            let totalPrice = 0;
+            let totalQty = 0;
+            let subtotal = 0;
 
-            if (cart.length === 0) {
-                cartItemsContainer.innerHTML = '<p class="text-zinc-500 text-center py-12 text-sm font-medium">Your cart is currently empty.</p>';
+            itemsEl.innerHTML = '';
+
+            if(cart.length === 0) {
+                itemsEl.innerHTML = `
+                    <div class="text-center py-12 space-y-3">
+                        <div class="w-16 h-16 bg-zinc-900 text-zinc-600 rounded-2xl flex items-center justify-center mx-auto text-2xl border border-zinc-800"><i class="fa-solid fa-basket-shopping"></i></div>
+                        <p class="text-zinc-400 text-sm font-semibold">Your cart is currently empty.</p>
+                    </div>
+                `;
             } else {
-                cartItemsContainer.innerHTML = '';
                 cart.forEach((item, index) => {
-                    totalCount += item.quantity;
-                    totalPrice += item.price * item.quantity;
+                    totalQty += item.qty;
+                    subtotal += item.price * item.qty;
 
-                    cartItemsContainer.innerHTML += `
-                        <div class="flex justify-between items-center bg-darkBg p-4 rounded-2xl border border-zinc-800">
-                            <div>
-                                <h4 class="font-bold text-white text-sm mb-0.5">${item.name} (${item.size})</h4>
-                                <p class="text-xs font-semibold text-gold-400">$${item.price.toFixed(2)} each</p>
+                    itemsEl.innerHTML += `
+                        <div class="bg-darkBg p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
+                            <div class="space-y-1">
+                                <h5 class="text-white font-bold text-sm">${item.name}</h5>
+                                <p class="text-xs text-gold-400 font-semibold">${item.portion} - GH₵ ${item.price.toFixed(2)}</p>
                             </div>
                             <div class="flex items-center space-x-3">
-                                <button onclick="changeQuantity(${index}, -1)" class="w-8 h-8 bg-cardBg border border-zinc-700 rounded-xl font-bold text-white flex items-center justify-center hover:bg-zinc-800 transition">-</button>
-                                <span class="font-bold text-sm text-white">${item.quantity}</span>
-                                <button onclick="changeQuantity(${index}, 1)" class="w-8 h-8 bg-cardBg border border-zinc-700 rounded-xl font-bold text-white flex items-center justify-center hover:bg-zinc-800 transition">+</button>
+                                <div class="flex items-center space-x-2 bg-cardBg border border-zinc-800 rounded-xl px-2 py-1">
+                                    <button onclick="updateQuantity(${index}, -1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-minus"></i></button>
+                                    <span class="text-white text-xs font-bold">${item.qty}</span>
+                                    <button onclick="updateQuantity(${index}, 1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-plus"></i></button>
+                                </div>
                             </div>
                         </div>
                     `;
                 });
             }
 
-            cartCount.textContent = totalCount;
-            cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
-        }
-
-        function changeQuantity(index, change) {
-            cart[index].quantity += change;
-            if (cart[index].quantity <= 0) {
-                cart.splice(index, 1);
-            }
-            updateCartUI();
+            countEl.textContent = totalQty;
+            subtotalEl.textContent = `GH₵ ${subtotal.toFixed(2)}`;
+            totalEl.textContent = `GH₵ ${subtotal.toFixed(2)}`;
         }
 
         function checkoutWhatsApp() {
-            if (cart.length === 0) {
+            if(cart.length === 0) {
                 alert('Your cart is empty!');
                 return;
             }
 
-            let message = "Hello Madonna's Kitchen! 🌟🍽️\n";
-            message += "I am thrilled to place a new order with you. Here are the delicious items I have selected:\n\n";
-            
+            let message = "Hello Madonna's Kitchen, I would like to place an order:%0A%0A";
             let total = 0;
-            
+
             cart.forEach((item, index) => {
-                let itemTotal = item.price * item.quantity;
+                let itemTotal = item.price * item.qty;
                 total += itemTotal;
-                message += `${index + 1}. *${item.name}*\n`;
-                message += `   - Portion/Size: ${item.size}\n`;
-                message += `   - Unit Price: $${item.price.toFixed(2)}\n`;
-                message += `   - Quantity: ${item.quantity}\n`;
-                message += `   - Subtotal: $${itemTotal.toFixed(2)}\n\n`;
+                message += `${index + 1}. *${item.name}* (${item.portion}) x ${item.qty} - GH₵ ${itemTotal.toFixed(2)}%0A`;
             });
 
-            message += `-----------------------------------\n`;
-            message += `*Grand Total Cost: $${total.toFixed(2)}*\n\n`;
-            message += "Please kindly confirm availability and delivery details so I can receive my wonderful meal soon. Thank you so much! ✨😊";
+            message += `%0A*Total Amount (Full Standard Pricing):* GH₵ ${total.toFixed(2)}`;
+            message += `%0A%0APlease let me know delivery details!`;
 
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/233241645782?text=${encodedMessage}`;
+            const whatsappUrl = `https://wa.me/233241645782?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Appointment submission via WhatsApp
+        function submitAppointment(event) {
+            event.preventDefault();
+            const name = document.getElementById('appt-name').value;
+            const phone = document.getElementById('appt-phone').value;
+            const service = document.getElementById('appt-service').value;
+            const datetime = document.getElementById('appt-datetime').value;
+            const notes = document.getElementById('appt-notes').value;
+
+            let message = `Hello Madonna's Kitchen, I would like to book an appointment:%0A%0A`;
+            message += `*Name:* ${name}%0A`;
+            message += `*Phone:* ${phone}%0A`;
+            message += `*Service:* ${service}%0A`;
+            message += `*Date & Time:* ${datetime}%0A`;
+            if(notes) message += `*Notes:* ${notes}%0A`;
+
+            const whatsappUrl = `https://wa.me/233241645782?text=${message}`;
             window.open(whatsappUrl, '_blank');
         }
     </script>
