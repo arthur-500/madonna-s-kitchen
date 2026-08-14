@@ -250,7 +250,8 @@
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>ORDER ON WHATSAPP</span>
                 </a>
-                <a href="#menu" onclick="shrinkHero()" class="bg-zinc-900/80 hover:bg-zinc-900 text-white border border-gold-400/80 backdrop-blur-md font-bold px-8 py-4 rounded-2xl transition flex items-center justify-center text-xs tracking-wider uppercase shadow-lg w-full sm:w-auto">
+                <!-- Hidden on smaller screens (sm and below), visible from md upwards -->
+                <a href="#menu" onclick="shrinkHero()" class="hidden md:flex bg-zinc-900/80 hover:bg-zinc-900 text-white border border-gold-400/80 backdrop-blur-md font-bold px-8 py-4 rounded-2xl transition items-center justify-center text-xs tracking-wider uppercase shadow-lg w-full sm:w-auto">
                     VIEW OUR MENU
                 </a>
             </div>
