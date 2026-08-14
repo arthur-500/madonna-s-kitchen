@@ -117,8 +117,8 @@
                     </div>
                 </div>
 
-                <!-- Desktop Links -->
-                <div class="hidden md:flex space-x-6 items-center font-medium text-sm text-zinc-300">
+                <!-- Desktop Links (Fixed for medium screens by changing md:flex to lg:flex) -->
+                <div class="hidden lg:flex space-x-6 items-center font-medium text-sm text-zinc-300">
                     <a href="#home" class="hover:text-gold-400 transition">Home</a>
                     <a href="#about" class="hover:text-gold-400 transition">About Us</a>
                     <a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition">Menu</a>
@@ -141,8 +141,8 @@
                         <span id="cart-count" class="absolute -top-1.5 -right-1.5 bg-gold-400 text-black text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-md">0</span>
                     </button>
 
-                    <!-- Mobile Hamburger Button -->
-                    <div class="md:hidden flex items-center">
+                    <!-- Mobile Hamburger Button (Fixed for medium screens by changing md:hidden to lg:hidden) -->
+                    <div class="lg:hidden flex items-center">
                         <button id="hamburger-btn" onclick="toggleMobileMenu()" class="bg-zinc-900 hover:bg-zinc-800 text-gold-400 w-11 h-11 rounded-2xl flex items-center justify-center transition border border-zinc-800 focus:outline-none shadow-lg">
                             <i id="hamburger-icon" class="fa-solid fa-bars text-lg"></i>
                         </button>
@@ -250,14 +250,13 @@
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>ORDER ON WHATSAPP</span>
                 </a>
-                <!-- Hidden on smaller screens (sm and below), visible from md upwards -->
-                <a href="#menu" onclick="shrinkHero()" class="hidden md:flex bg-zinc-900/80 hover:bg-zinc-900 text-white border border-gold-400/80 backdrop-blur-md font-bold px-8 py-4 rounded-2xl transition items-center justify-center text-xs tracking-wider uppercase shadow-lg w-full sm:w-auto">
+                <a href="#menu" onclick="shrinkHero()" class="flex bg-zinc-900/80 hover:bg-zinc-900 text-white border border-gold-400/80 backdrop-blur-md font-bold px-8 py-4 rounded-2xl transition items-center justify-center text-xs tracking-wider uppercase shadow-lg w-full sm:w-auto">
                     VIEW OUR MENU
                 </a>
             </div>
 
             <!-- Feature Badges -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full bg-black/60 backdrop-blur-md p-4 rounded-3xl border border-zinc-800/80">
+            <div class="hidden sm:grid grid-cols-2 sm:grid-cols-4 gap-3 w-full bg-black/60 backdrop-blur-md p-4 rounded-3xl border border-zinc-800/80">
                 <div class="flex flex-col items-center text-center space-y-1">
                     <div class="text-gold-400 text-lg"><i class="fa-solid fa-seedling"></i></div>
                     <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-200">FRESH INGREDIENTS</span>
@@ -1253,7 +1252,7 @@
             message += "Please kindly confirm availability and delivery details so I can receive my wonderful meal soon. Thank you so much! ✨😊";
 
             const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/244241645782?text=${encodedMessage}`;
+            const whatsappUrl = `https://wa.me/233241645782?text=${encodedMessage}`;
             window.open(whatsappUrl, '_blank');
         }
     </script>
