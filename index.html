@@ -517,7 +517,7 @@
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-4-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
-                                    <option value="Family Bowl" data-price="530.00">Family Bowl (₵ 530.00)</option>
+                                    <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Red fish stew', 'dish-4-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -543,7 +543,7 @@
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
                                 <select id="dish-5-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
-                                    <option value="Large" data-price="530.00">Large (₵ 530.00)</option>
+                                    <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
                             <button onclick="addCustomToCart('Turkey wings stew', 'dish-5-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
@@ -827,7 +827,7 @@
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Coca Cola</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">₵ 35.00</span>
+                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 35.00</span>
                         </div>
                         <button onclick="addToCart('Coca Cola', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
@@ -836,7 +836,7 @@
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Fanta</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">₵ 35.00</span>
+                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 35.00</span>
                         </div>
                         <button onclick="addToCart('Fanta', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
@@ -845,7 +845,7 @@
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Sprite</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">₵ 35.00</span>
+                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 35.00</span>
                         </div>
                         <button onclick="addToCart('Sprite', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
@@ -854,7 +854,7 @@
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Malt</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">₵ 40.00</span>
+                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 40.00</span>
                         </div>
                         <button onclick="addToCart('Malt', 'Standard', 40.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
@@ -863,7 +863,7 @@
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Alvaro</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">₵ 40.00</span>
+                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 40.00</span>
                         </div>
                         <button onclick="addToCart('Alvaro', 'Standard', 40.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
@@ -872,7 +872,7 @@
                         <div>
                             <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-glass-water"></i></div>
                             <h5 class="font-bold text-white text-sm mb-1">Mineral Water</h5>
-                            <span class="text-gold-400 font-extrabold text-sm">₵ 20.00</span>
+                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 20.00</span>
                         </div>
                         <button onclick="addToCart('Mineral Water', 'Standard', 20.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
                     </div>
@@ -1230,21 +1230,22 @@
                     totalQty += item.qty;
                     subtotal += item.price * item.qty;
 
-                    itemsEl.innerHTML += `
-                        <div class="bg-darkBg p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
-                            <div class="space-y-1">
-                                <h5 class="text-white font-bold text-sm">${item.name}</h5>
-                                <p class="text-xs text-gold-400 font-semibold">${item.portion} - ₵ ${item.price.toFixed(2)}</p>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <div class="flex items-center space-x-2 bg-cardBg border border-zinc-800 rounded-xl px-2 py-1">
-                                    <button onclick="updateQuantity(${index}, -1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-minus"></i></button>
-                                    <span class="text-white text-xs font-bold">${item.qty}</span>
-                                    <button onclick="updateQuantity(${index}, 1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-plus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    `;
+    // Use only the cedis symbol (₵) and allow selection additions correctly
+    itemsEl.innerHTML += `
+        <div class="bg-darkBg p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
+            <div class="space-y-1">
+                <h5 class="text-white font-bold text-sm">${item.name}</h5>
+                <p class="text-xs text-gold-400 font-semibold">${item.portion} - ₵ ${item.price.toFixed(2)}</p>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2 bg-cardBg border border-zinc-800 rounded-xl px-2 py-1">
+                    <button onclick="updateQuantity(${index}, -1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-minus"></i></button>
+                    <span class="text-white text-xs font-bold">${item.qty}</span>
+                    <button onclick="updateQuantity(${index}, 1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    `;
                 });
             }
 
