@@ -117,11 +117,12 @@
                     </div>
                 </div>
 
-                <!-- Desktop Links (Fixed spacing and font scaling for large screens) -->
+                <!-- Desktop Links -->
                 <div class="hidden lg:flex space-x-3 xl:space-x-5 items-center font-medium text-xs xl:text-sm text-zinc-300">
                     <a href="#home" class="hover:text-gold-400 transition whitespace-nowrap">Home</a>
                     <a href="#about" class="hover:text-gold-400 transition whitespace-nowrap">About Us</a>
                     <a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition whitespace-nowrap">Menu</a>
+                    <a href="#drinks-section" class="hover:text-gold-400 transition whitespace-nowrap">Drinks</a>
                     <a href="#catering" class="hover:text-gold-400 transition whitespace-nowrap">Catering</a>
                     <a href="#booking" class="hover:text-gold-400 transition whitespace-nowrap">Book Appointment</a>
                     <a href="#gallery" class="hover:text-gold-400 transition whitespace-nowrap">Gallery</a>
@@ -155,7 +156,6 @@
         <!-- Enhanced Mobile Full-Screen Overlay Menu -->
         <div id="mobile-menu" class="fixed inset-x-0 top-0 h-screen bg-[#0b0b0c] backdrop-blur-xl border-b border-zinc-800 px-6 py-8 flex flex-col justify-between z-50 overflow-y-auto">
             <div>
-                <!-- Top Header inside mobile overlay with Close Button -->
                 <div class="flex justify-between items-center pb-6 border-b border-zinc-800 mb-6">
                     <div class="flex items-center space-x-3">
                         <div class="w-10 h-10 rounded-xl bg-gold-400/10 text-gold-400 flex items-center justify-center border border-gold-400/20">
@@ -163,13 +163,11 @@
                         </div>
                         <span class="text-white font-black tracking-wider uppercase text-base">Madonna's Menu</span>
                     </div>
-                    <!-- Dedicated Close Button -->
                     <button onclick="toggleMobileMenu()" class="w-11 h-11 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-gold-400 rounded-2xl flex items-center justify-center transition border border-zinc-800 focus:outline-none shadow-md">
                         <i class="fa-solid fa-xmark text-xl"></i>
                     </button>
                 </div>
 
-                <!-- Navigation Links with Logos/Icons -->
                 <div class="space-y-2">
                     <a href="#home" onclick="toggleMobileMenu()" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
                         <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
@@ -188,6 +186,12 @@
                             <i class="fa-solid fa-book-open text-sm"></i>
                         </div>
                         <span>Our Menu</span>
+                    </a>
+                    <a href="#drinks-section" onclick="toggleMobileMenu()" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
+                        <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
+                            <i class="fa-solid fa-champagne-glasses text-sm"></i>
+                        </div>
+                        <span>Drinks & Beverages</span>
                     </a>
                     <a href="#catering" onclick="toggleMobileMenu()" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
                         <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
@@ -222,7 +226,6 @@
                 </div>
             </div>
 
-            <!-- Bottom Contact info inside overlay -->
             <div class="pt-6 border-t border-zinc-800 flex flex-col space-y-4">
                 <a href="tel:+244241645782" class="bg-cardBg hover:bg-zinc-900 p-4 rounded-2xl border border-zinc-800 text-gold-400 font-bold text-sm flex items-center justify-between transition shadow-md">
                     <div class="flex items-center space-x-3">
@@ -418,7 +421,7 @@
                 <button onclick="filterMenu('all')" id="btn-all" class="menu-tab bg-gold-400 text-black font-extrabold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition shadow-md">All Items</button>
                 <button onclick="filterMenu('dishes')" id="btn-dishes" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Local & Continental</button>
                 <button onclick="filterMenu('snacks')" id="btn-snacks" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Snacks & Pastries</button>
-                <button onclick="filterMenu('drinks')" id="btn-drinks" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Beverages</button>
+                <button onclick="filterMenu('drinks')" id="btn-drinks" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Drinks</button>
             </div>
 
             <!-- MENU GRID -->
@@ -816,66 +819,17 @@
 
             </div>
 
-            <!-- DRINKS SUB-SECTION -->
-            <div id="drinks-section" class="mt-20">
-                <div class="flex items-center space-x-3 mb-8">
-                    <div class="w-10 h-10 bg-gold-400/10 text-gold-400 rounded-xl flex items-center justify-center font-bold text-lg border border-gold-400/20"><i class="fa-solid fa-champagne-glasses"></i></div>
-                    <h3 class="text-2xl font-black text-white tracking-tight">Soft Drinks & Beverages</h3>
+            <!-- DRINKS SUB-SECTION (Modern KFS-inspired Redesigned Cards) -->
+            <div id="drinks-section" class="mt-24 pt-8 max-w-7xl mx-auto scroll-mt-28" data-category="drinks">
+                <div class="text-center mb-12">
+                    <span class="text-gold-400 font-extrabold text-xs tracking-[0.3em] uppercase mb-2 block">Refreshing Selections</span>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">Soft Drinks & Beverages</h3>
+                    <p class="text-zinc-400 text-sm mt-2">Explore our ice-cold beverage lineup crafted to perfection.</p>
                 </div>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
-                        <div>
-                            <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
-                            <h5 class="font-bold text-white text-sm mb-1">Coca Cola</h5>
-                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 35.00</span>
-                        </div>
-                        <button onclick="addToCart('Coca Cola', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
-                    </div>
 
-                    <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
-                        <div>
-                            <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
-                            <h5 class="font-bold text-white text-sm mb-1">Fanta</h5>
-                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 35.00</span>
-                        </div>
-                        <button onclick="addToCart('Fanta', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
-                    </div>
-
-                    <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
-                        <div>
-                            <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
-                            <h5 class="font-bold text-white text-sm mb-1">Sprite</h5>
-                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 35.00</span>
-                        </div>
-                        <button onclick="addToCart('Sprite', 'Standard', 35.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
-                    </div>
-
-                    <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
-                        <div>
-                            <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
-                            <h5 class="font-bold text-white text-sm mb-1">Malt</h5>
-                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 40.00</span>
-                        </div>
-                        <button onclick="addToCart('Malt', 'Standard', 40.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
-                    </div>
-
-                    <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
-                        <div>
-                            <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-bottle-water"></i></div>
-                            <h5 class="font-bold text-white text-sm mb-1">Alvaro</h5>
-                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 40.00</span>
-                        </div>
-                        <button onclick="addToCart('Alvaro', 'Standard', 40.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
-                    </div>
-
-                    <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 hover:border-gold-400/50 p-5 text-center flex flex-col justify-between group transition" data-category="drinks">
-                        <div>
-                            <div class="w-14 h-14 bg-cardBg text-gold-400 rounded-2xl flex items-center justify-center mx-auto mb-4 text-xl group-hover:scale-110 transition border border-zinc-800"><i class="fa-solid fa-glass-water"></i></div>
-                            <h5 class="font-bold text-white text-sm mb-1">Mineral Water</h5>
-                            <span class="text-gold-400 font-extrabold text-xs sm:text-sm block truncate">₵ 20.00</span>
-                        </div>
-                        <button onclick="addToCart('Mineral Water', 'Standard', 20.00)" class="mt-5 w-full bg-zinc-800 hover:bg-gold-400 hover:text-black text-zinc-200 text-xs font-bold py-2.5 rounded-xl transition">Add</button>
-                    </div>
+                <!-- Modern KFS-Styled Drink Cards Grid Container -->
+                <div id="drinks-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Dynamic Modern Drink Cards Injected via JS -->
                 </div>
             </div>
 
@@ -1012,6 +966,7 @@
                     <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
                     <li><a href="#about" class="hover:text-gold-400 transition">About Us</a></li>
                     <li><a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition">Our Menu</a></li>
+                    <li><a href="#drinks-section" class="hover:text-gold-400 transition">Drinks</a></li>
                     <li><a href="#catering" class="hover:text-gold-400 transition">Catering Services</a></li>
                     <li><a href="#booking" class="hover:text-gold-400 transition">Book Appointment</a></li>
                 </ul>
@@ -1138,10 +1093,61 @@
             }
         }
 
+        // Drinks Data Source with Local File Tree Paths
+        const drinksList = [
+            { name: "Yogurt", price: 25.00, img: "img/yogot.png" },
+            { name: "Sobolo", price: 25.00, img: "img/sobolo.png" },
+            { name: "Marshed kenkey", price: 25.00, img: "img/Marshed kenkey.png" },
+           
+        ];
+
+        // Render Modern KFS-Styled Bold Drink Cards Grid
+        function renderDrinksGrid() {
+            const grid = document.getElementById('drinks-grid');
+            grid.innerHTML = '';
+            drinksList.forEach((drink) => {
+                grid.innerHTML += `
+                    <div class="menu-item relative bg-gradient-to-br from-[#18181b] via-[#121215] to-[#09090b] rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-zinc-800/80 hover:border-gold-400 hover:shadow-gold-400/10 transition-all duration-500 flex flex-col justify-between group overflow-hidden">
+                        <!-- Decorative ambient glow ring -->
+                        <div class="absolute -right-16 -top-16 w-44 h-44 bg-gold-400/10 rounded-full blur-3xl group-hover:bg-gold-400/20 transition-all duration-700"></div>
+
+                        <!-- Top Tag & Pricing -->
+                        <div class="flex justify-between items-center mb-4 z-10">
+                            <span class="bg-gold-400/10 text-gold-400 text-[10px] sm:text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest border border-gold-400/30 shadow-sm">Ice Cold</span>
+                            <div class="flex items-center space-x-1 bg-black/40 px-3.5 py-1.5 rounded-2xl border border-zinc-800">
+                                <span class="text-gold-400 font-black text-base sm:text-lg tracking-tight">₵ ${drink.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+
+                        <!-- High-Impact KFS-Style Floating Image Container -->
+                        <div class="relative h-56 sm:h-64 w-full flex items-center justify-center my-4 z-10">
+                            <div class="absolute inset-0 bg-gradient-to-t from-gold-400/5 via-transparent to-transparent rounded-3xl filter blur-md opacity-50 group-hover:opacity-100 transition duration-500"></div>
+                            <img src="${drink.img}" alt="${drink.name}" class="relative h-full w-full object-contain drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 ease-out">
+                        </div>
+
+                        <!-- Name & Action Button -->
+                        <div class="pt-4 border-t border-zinc-800/80 z-10 flex flex-col justify-end space-y-4">
+                            <h4 class="text-xl sm:text-2xl font-black text-white tracking-wide group-hover:text-gold-400 transition-colors duration-300">${drink.name}</h4>
+                            <button onclick="addToCart('${drink.name}', 'Standard', ${drink.price})" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-black py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-gold-400/20 flex items-center justify-center space-x-2 text-xs sm:text-sm uppercase tracking-wider transform active:scale-95">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Initialize drinks grid on load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderDrinksGrid();
+        });
+
         // Menu filtering
         function filterMenu(category) {
             const items = document.querySelectorAll('.menu-item');
             const tabs = document.querySelectorAll('.menu-tab');
+            const drinksSection = document.getElementById('drinks-section');
             
             tabs.forEach(tab => {
                 tab.classList.remove('bg-gold-400', 'text-black', 'font-extrabold', 'shadow-md');
@@ -1155,12 +1161,31 @@
             }
 
             items.forEach(item => {
-                if(category === 'all' || item.getAttribute('data-category') === category) {
+                if(category === 'all') {
                     item.style.display = 'flex';
+                } else if(category === 'drinks') {
+                    if(item.closest('#drinks-section')) {
+                        drinksSection.style.display = 'block';
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 } else {
-                    item.style.display = 'none';
+                    if(item.closest('#drinks-section')) {
+                        drinksSection.style.display = 'none';
+                    } else if(item.getAttribute('data-category') === category) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 }
             });
+
+            if(category === 'dishes' || category === 'snacks') {
+                drinksSection.style.display = 'none';
+            } else {
+                drinksSection.style.display = 'block';
+            }
         }
 
         function shrinkHero() {
@@ -1230,22 +1255,23 @@
                     totalQty += item.qty;
                     subtotal += item.price * item.qty;
 
-    // Use only the cedis symbol (₵) and allow selection additions correctly
-    itemsEl.innerHTML += `
-        <div class="bg-darkBg p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
-            <div class="space-y-1">
-                <h5 class="text-white font-bold text-sm">${item.name}</h5>
-                <p class="text-xs text-gold-400 font-semibold">${item.portion} - ₵ ${item.price.toFixed(2)}</p>
-            </div>
-            <div class="flex items-center space-x-3">
-                <div class="flex items-center space-x-2 bg-cardBg border border-zinc-800 rounded-xl px-2 py-1">
-                    <button onclick="updateQuantity(${index}, -1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-minus"></i></button>
-                    <span class="text-white text-xs font-bold">${item.qty}</span>
-                    <button onclick="updateQuantity(${index}, 1)" class="text-zinc-400 hover:text-white px-1 text-xs"><i class="fa-solid fa-plus"></i></button>
-                </div>
-            </div>
-        </div>
-    `;
+                    itemsEl.innerHTML += `
+                        <div class="bg-darkBg p-4 rounded-2xl border border-zinc-800 flex items-center justify-between">
+                            <div class="space-y-1">
+                                <h5 class="text-white font-bold text-sm">${item.name}</h5>
+                                <p class="text-xs text-gold-400 font-semibold">${item.portion} - ₵ ${item.price.toFixed(2)}</p>
+                                <div class="flex items-center space-x-3 pt-2">
+                                    <button onclick="updateQuantity(${index}, -1)" class="w-7 h-7 bg-cardBg hover:bg-zinc-800 text-zinc-300 rounded-lg flex items-center justify-center border border-zinc-700 text-xs">-</button>
+                                    <span class="text-xs font-bold text-white">${item.qty}</span>
+                                    <button onclick="updateQuantity(${index}, 1)" class="w-7 h-7 bg-cardBg hover:bg-zinc-800 text-zinc-300 rounded-lg flex items-center justify-center border border-zinc-700 text-xs">+</button>
+                                </div>
+                            </div>
+                            <div class="text-right space-y-2">
+                                <span class="text-sm font-black text-white block">₵ ${(item.price * item.qty).toFixed(2)}</span>
+                                <button onclick="updateQuantity(${index}, -${item.qty})" class="text-zinc-500 hover:text-red-400 text-xs transition"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                        </div>
+                    `;
                 });
             }
 
@@ -1256,27 +1282,25 @@
 
         function checkoutWhatsApp() {
             if(cart.length === 0) {
-                alert('Your cart is empty!');
+                alert('Your cart is empty. Please add items before checking out.');
                 return;
             }
 
-            let message = "Hello Madonna's Kitchen, I would like to place an order:%0A%0A";
-            let total = 0;
+            let message = "*New Order - Madonna's Kitchen*%0A%0A";
+            let subtotal = 0;
 
-            cart.forEach((item, index) => {
-                let itemTotal = item.price * item.qty;
-                total += itemTotal;
-                message += `${index + 1}. *${item.name}* (${item.portion}) x ${item.qty} - ₵ ${itemTotal.toFixed(2)}%0A`;
+            cart.forEach((item, idx) => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                message += `${idx + 1}. *${item.name}* (${item.portion}) x ${item.qty} - ₵ ${itemTotal.toFixed(2)}%0A`;
             });
 
-            message += `%0A*Total Amount (Full Standard Pricing):* ₵ ${total.toFixed(2)}`;
-            message += `%0A%0APlease let me know on how to make paymeny and delivery details!`;
-
-            const whatsappUrl = `https://wa.me/233241645782?text=${message}`;
+            message += `%0A*Total Amount: ₵ ${subtotal.toFixed(2)}*%0A%0APlease confirm my order and delivery details.`;
+            
+            const whatsappUrl = `https://wa.me/233207076481?text=${message}`;
             window.open(whatsappUrl, '_blank');
         }
 
-        // Appointment submission via WhatsApp
         function submitAppointment(event) {
             event.preventDefault();
             const name = document.getElementById('appt-name').value;
@@ -1285,14 +1309,8 @@
             const datetime = document.getElementById('appt-datetime').value;
             const notes = document.getElementById('appt-notes').value;
 
-            let message = `Hello Madonna's Kitchen, I would like to book an appointment:%0A%0A`;
-            message += `*Name:* ${name}%0A`;
-            message += `*Phone:* ${phone}%0A`;
-            message += `*Service:* ${service}%0A`;
-            message += `*Date & Time:* ${datetime}%0A`;
-            if(notes) message += `*Notes:* ${notes}%0A`;
-
-            const whatsappUrl = `https://wa.me/233241645782?text=${message}`;
+            let message = `*New Appointment / Reservation - Madonna's Kitchen*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Date & Time:* ${datetime}%0A*Notes:* ${notes || 'None'}`;
+            const whatsappUrl = `https://wa.me/233207076481?text=${message}`;
             window.open(whatsappUrl, '_blank');
         }
     </script>
