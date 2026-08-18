@@ -1097,8 +1097,7 @@
         const drinksList = [
             { name: "Yogurt", price: 25.00, img: "img/yogot.png" },
             { name: "Sobolo", price: 25.00, img: "img/sobolo.png" },
-            { name: "Marshed kenkey", price: 25.00, img: "img/Marshed kenkey.png" },
-           
+            { name: "Marshed kenkey", price: 25.00, img: "img/Marshed Kenkey.png" },
         ];
 
         // Render Modern KFS-Styled Bold Drink Cards Grid
@@ -1119,10 +1118,10 @@
                             </div>
                         </div>
 
-                        <!-- High-Impact KFS-Style Floating Image Container -->
-                        <div class="relative h-56 sm:h-64 w-full flex items-center justify-center my-4 z-10">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gold-400/5 via-transparent to-transparent rounded-3xl filter blur-md opacity-50 group-hover:opacity-100 transition duration-500"></div>
-                            <img src="${drink.img}" alt="${drink.name}" class="relative h-full w-full object-contain drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)] group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 ease-out">
+                        <!-- High-Impact KFS-Style Full Cover Image Container -->
+                        <div class="relative h-56 sm:h-64 w-full overflow-hidden rounded-2xl my-4 z-10 border border-zinc-800/60">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-40"></div>
+                            <img src="${drink.img}" alt="${drink.name}" class="relative h-full w-full object-cover group-hover:scale-105 transition-all duration-500 ease-out">
                         </div>
 
                         <!-- Name & Action Button -->
@@ -1309,9 +1308,18 @@
             const datetime = document.getElementById('appt-datetime').value;
             const notes = document.getElementById('appt-notes').value;
 
-            let message = `*New Appointment / Reservation - Madonna's Kitchen*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Date & Time:* ${datetime}%0A*Notes:* ${notes || 'None'}`;
-            const whatsappUrl = `https://wa.me/233207076481?text=${message}`;
-            window.open(whatsappUrl, '_blank');
+            let msg = `*New Appointment / Reservation Request*%0A%0A`;
+            msg += `*Name:* ${name}%0A`;
+            msg += `*Phone:* ${phone}%0A`;
+            msg += `*Service:* ${service}%0A`;
+            msg += `*Date & Time:* ${datetime}%0A`;
+            if(notes) {
+                msg += `*Notes:* ${notes}%0A`;
+            }
+            msg += `%0APlease confirm my booking.`;
+
+            const url = `https://wa.me/233207076481?text=${msg}`;
+            window.open(url, '_blank');
         }
     </script>
 </body>
