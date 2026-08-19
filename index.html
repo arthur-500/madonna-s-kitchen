@@ -122,7 +122,7 @@
                     <a href="#home" class="hover:text-gold-400 transition whitespace-nowrap">Home</a>
                     <a href="#about" class="hover:text-gold-400 transition whitespace-nowrap">About Us</a>
                     <a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition whitespace-nowrap">Menu</a>
-                    <a href="#drinks-section" class="hover:text-gold-400 transition whitespace-nowrap">Drinks</a>
+                    <a href="#menu" onclick="filterMenu('drinks')" class="hover:text-gold-400 transition whitespace-nowrap">Drinks</a>
                     <a href="#catering" class="hover:text-gold-400 transition whitespace-nowrap">Catering</a>
                     <a href="#booking" class="hover:text-gold-400 transition whitespace-nowrap">Book Appointment</a>
                     <a href="#gallery" class="hover:text-gold-400 transition whitespace-nowrap">Gallery</a>
@@ -187,7 +187,7 @@
                         </div>
                         <span>Our Menu</span>
                     </a>
-                    <a href="#drinks-section" onclick="toggleMobileMenu()" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
+                    <a href="#menu" onclick="toggleMobileMenu(); filterMenu('drinks');" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
                         <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
                             <i class="fa-solid fa-champagne-glasses text-sm"></i>
                         </div>
@@ -966,7 +966,7 @@
                     <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
                     <li><a href="#about" class="hover:text-gold-400 transition">About Us</a></li>
                     <li><a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition">Our Menu</a></li>
-                    <li><a href="#drinks-section" class="hover:text-gold-400 transition">Drinks</a></li>
+                    <li><a href="#menu" onclick="filterMenu('drinks')" class="hover:text-gold-400 transition">Drinks</a></li>
                     <li><a href="#catering" class="hover:text-gold-400 transition">Catering Services</a></li>
                     <li><a href="#booking" class="hover:text-gold-400 transition">Book Appointment</a></li>
                 </ul>
