@@ -121,9 +121,10 @@
                 <div class="hidden lg:flex space-x-3 xl:space-x-5 items-center font-medium text-xs xl:text-sm text-zinc-300">
                     <a href="#home" class="hover:text-gold-400 transition whitespace-nowrap">Home</a>
                     <a href="#about" class="hover:text-gold-400 transition whitespace-nowrap">About Us</a>
-                    <a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition whitespace-nowrap">Menu</a>
+                    <a href="#menu" onclick="filterMenu('single-plates')" class="hover:text-gold-400 transition whitespace-nowrap">Menu</a>
                     <a href="#menu" onclick="filterMenu('drinks')" class="hover:text-gold-400 transition whitespace-nowrap">Drinks</a>
-                    <a href="#catering" class="hover:text-gold-400 transition whitespace-nowrap">Catering</a>
+                    <a href="#menu" onclick="filterMenu('pastries')" class="hover:text-gold-400 transition whitespace-nowrap">Pastries</a>
+                    <a href="#catering" class="hover:text-gold-400 transition whitespace-nowrap">Our services</a>
                     <a href="#booking" class="hover:text-gold-400 transition whitespace-nowrap">Book Appointment</a>
                     <a href="#gallery" class="hover:text-gold-400 transition whitespace-nowrap">Gallery</a>
                     <a href="#testimonials" class="hover:text-gold-400 transition whitespace-nowrap">Testimonials</a>
@@ -187,11 +188,23 @@
                         </div>
                         <span>Our Menu</span>
                     </a>
+                    <a href="#menu" onclick="toggleMobileMenu(); filterMenu('single-plates');" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
+                        <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
+                            <i class="fa-solid fa-bowl-food text-sm"></i>
+                        </div>
+                        <span>Single Plate Foods</span>
+                    </a>
                     <a href="#menu" onclick="toggleMobileMenu(); filterMenu('drinks');" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
                         <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
                             <i class="fa-solid fa-champagne-glasses text-sm"></i>
                         </div>
-                        <span>Drinks & Beverages</span>
+                        <span>Drinks & Minerals</span>
+                    </a>
+                    <a href="#menu" onclick="toggleMobileMenu(); filterMenu('pastries');" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
+                        <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
+                            <i class="fa-solid fa-cookie-bite text-sm"></i>
+                        </div>
+                        <span>Pastries</span>
                     </a>
                     <a href="#catering" onclick="toggleMobileMenu()" class="flex items-center space-x-4 px-4 py-3.5 rounded-2xl text-zinc-300 hover:text-black hover:bg-gold-400 font-semibold text-sm transition group">
                         <div class="w-9 h-9 rounded-xl bg-zinc-900 text-gold-400 group-hover:bg-black group-hover:text-gold-400 flex items-center justify-center transition border border-zinc-800">
@@ -258,7 +271,7 @@
             <div class="flex flex-col sm:flex-row gap-4 max-w-full mb-12 items-center justify-center w-full">
                 <a href="#menu" onclick="shrinkHero()" class="bg-gold-400 hover:bg-gold-500 text-black font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-gold-400/20 transition flex items-center justify-center space-x-2.5 text-xs tracking-wider uppercase w-full sm:w-auto">
                     <i class="fa-brands fa-whatsapp text-base"></i>
-                    <span>ORDER ON WHATSAPP</span>
+                    <span>ORDER Now</span>
                 </a>
                 <a href="#menu" onclick="shrinkHero()" class="flex bg-zinc-900/80 hover:bg-zinc-900 text-white border border-gold-400/80 backdrop-blur-md font-bold px-8 py-4 rounded-2xl transition items-center justify-center text-xs tracking-wider uppercase shadow-lg w-full sm:w-auto">
                     VIEW OUR MENU
@@ -359,7 +372,7 @@
             <div class="text-center mb-16">
                 <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Reserve Your Spot</span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Book an Appointment or Table</h2>
-                <p class="text-zinc-400 max-w-xl mx-auto text-base">Fill out the form below to book your service or reservation instantly via WhatsApp.</p>
+                <p class="text-zinc-400 max-w-xl mx-auto text-base">Fill out the form below to book your service or reservation Now.</p>
             </div>
 
             <div class="bg-darkBg border border-zinc-800 rounded-3xl p-6 sm:p-10 shadow-xl">
@@ -413,15 +426,15 @@
             <div class="text-center mb-16">
                 <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Our Gastronomy</span>
                 <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Explore Our Menu Selection</h2>
-                <p class="text-zinc-400 max-w-xl mx-auto text-base">All items are billed in Ghanaian Cedis (₵) at exact standard menu pricing with zero discounts applied.</p>
+                <p class="text-zinc-400 max-w-xl mx-auto text-base">All items are billed in Ghanaian Cedis (₵) at exact standard menu pricing.</p>
             </div>
 
             <!-- Interactive Category Tabs -->
             <div class="flex flex-wrap justify-center gap-3 mb-12">
-                <button onclick="filterMenu('all')" id="btn-all" class="menu-tab bg-gold-400 text-black font-extrabold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition shadow-md">All Items</button>
-                <button onclick="filterMenu('dishes')" id="btn-dishes" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Local & Continental</button>
-                <button onclick="filterMenu('snacks')" id="btn-snacks" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Snacks & Pastries</button>
-                <button onclick="filterMenu('drinks')" id="btn-drinks" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Drinks</button>
+                <button onclick="filterMenu('all')" id="btn-all" class="menu-tab bg-gold-400 text-black font-extrabold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition shadow-md">Family packages</button>
+                <button onclick="filterMenu('single-plates')" id="btn-single-plates" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Single Plates</button>
+                <button onclick="filterMenu('drinks')" id="btn-drinks" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Drinks & Minerals</button>
+                <button onclick="filterMenu('pastries')" id="btn-pastries" class="menu-tab bg-darkBg text-zinc-300 hover:text-gold-400 border border-zinc-800 font-bold px-6 py-3 rounded-2xl text-xs uppercase tracking-wider transition">Pastries</button>
             </div>
 
             <!-- MENU GRID -->
@@ -819,17 +832,42 @@
 
             </div>
 
-            <!-- DRINKS SUB-SECTION (Modern KFS-inspired Redesigned Cards) -->
+            <!-- SINGLE PLATE FOODS SECTION -->
+            <div id="single-plates-section" class="mt-24 pt-8 max-w-7xl mx-auto scroll-mt-28" data-category="single-plates">
+                <div class="text-center mb-12">
+                    <span class="text-gold-400 font-extrabold text-xs tracking-[0.3em] uppercase mb-2 block">Quick & Affordable</span>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">Single Plate</h3>
+                    <p class="text-zinc-400 text-sm mt-2">Enjoy delicious, ready-to-eat single servings at flat standard pricing.</p>
+                </div>
+
+                <div id="single-plates-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Dynamic Single Plates Injected via JS -->
+                </div>
+            </div>
+
+            <!-- DRINKS SUB-SECTION (Including Minerals) -->
             <div id="drinks-section" class="mt-24 pt-8 max-w-7xl mx-auto scroll-mt-28" data-category="drinks">
                 <div class="text-center mb-12">
                     <span class="text-gold-400 font-extrabold text-xs tracking-[0.3em] uppercase mb-2 block">Refreshing Selections</span>
-                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">Soft Drinks & Beverages</h3>
-                    <p class="text-zinc-400 text-sm mt-2">Explore our ice-cold beverage lineup crafted to perfection.</p>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">Drinks & Minerals</h3>
+                    <p class="text-zinc-400 text-sm mt-2">Explore our ice-cold beverage and mineral lineup crafted to perfection.</p>
                 </div>
 
-                <!-- Modern KFS-Styled Drink Cards Grid Container -->
                 <div id="drinks-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     <!-- Dynamic Modern Drink Cards Injected via JS -->
+                </div>
+            </div>
+
+            <!-- PASTRIES SUB-SECTION -->
+            <div id="pastries-section" class="mt-24 pt-8 max-w-7xl mx-auto scroll-mt-28" data-category="pastries">
+                <div class="text-center mb-12">
+                    <span class="text-gold-400 font-extrabold text-xs tracking-[0.3em] uppercase mb-2 block">Baked Fresh Daily</span>
+                    <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight uppercase">Irresistible Pastries</h3>
+                    <p class="text-zinc-400 text-sm mt-2">Treat yourself to our delicious selection of freshly baked pastries and snacks.</p>
+                </div>
+
+                <div id="pastries-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Dynamic Pastry Cards Injected via JS -->
                 </div>
             </div>
 
@@ -966,7 +1004,9 @@
                     <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
                     <li><a href="#about" class="hover:text-gold-400 transition">About Us</a></li>
                     <li><a href="#menu" onclick="shrinkHero()" class="hover:text-gold-400 transition">Our Menu</a></li>
-                    <li><a href="#menu" onclick="filterMenu('drinks')" class="hover:text-gold-400 transition">Drinks</a></li>
+                    <li><a href="#menu" onclick="filterMenu('single-plates')" class="hover:text-gold-400 transition">Single Plates</a></li>
+                    <li><a href="#menu" onclick="filterMenu('drinks')" class="hover:text-gold-400 transition">Drinks & Minerals</a></li>
+                    <li><a href="#menu" onclick="filterMenu('pastries')" class="hover:text-gold-400 transition">Pastries</a></li>
                     <li><a href="#catering" class="hover:text-gold-400 transition">Catering Services</a></li>
                     <li><a href="#booking" class="hover:text-gold-400 transition">Book Appointment</a></li>
                 </ul>
@@ -1093,24 +1133,80 @@
             }
         }
 
-        // Drinks Data Source with Local File Tree Paths
-        const drinksList = [
-            { name: "Yogurt", price: 25.00, img: "img/yogot.png" },
-            { name: "Sobolo", price: 25.00, img: "img/sobolo.png" },
-            { name: "Marshed kenkey", price: 25.00, img: "img/Marshed Kenkey.png" },
+        // Single Place Foods Data Source (Priced at ₵35.00)
+        const singlePlatesList = [
+            { name: "Single Jollof Rice & Chicken", price: 35.00, img: "img/jollof.png" },
+            { name: "Single Fried Rice & Chicken", price: 35.00, img: "img/friedrice.png" },
+            { name: "Single Waakye & Accompaniments", price: 35.00, img: "img/waakye.png" },
+            { name: "Single Banku & Tilapia/Stew", price: 35.00, img: "img/Ampesi.png" },
         ];
 
-        // Render Modern KFS-Styled Bold Drink Cards Grid
+        // Drinks Data Source including Minerals (Punch, Mirinda, Pepsi, Fanta, etc.)
+        const drinksList = [
+             { name: "Mashke", price: 15.00, img: "img/Marshed Kenkey.png" },
+            { name: "Straw berry Yogurt", price: 20.00, img: "img/yogot.png" },
+            { name: "Vanila Yoghurt", price: 20.00, img: "img/vanilla.png" },
+            { name: "Mashke W/peanut ", price: 18.00, img: "img/Marshed Kenkey.png" },
+             { name: "Mashke W/coconut ", price: 20.00, img: "img/Marshed Kenkey.png" },
+            { name: "Pepsi (Mineral)", price: 30.00, img: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=600&q=80" },
+            { name: "Cocacola (Mineral)", price: 30.00, img: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80" },
+            { name: "Mirinda (Mineral)", price: 30.00, img: "img/mirinda.png" },
+             { name: "Sprite (Mineral)", price: 30.00, img: "img/sprite.png" },
+           
+        ];
+
+        // Pastries Data Source
+        const pastriesList = [
+            { name: "Meat Pie", price: 10.00, img: "img/meatpie.png" },
+            { name: "Chin Chin", price: 10.00, img: "img/chinchin.png" },
+            { name: "Baked Chips ", price: 10.00, img: "img/bakedchips.png" },
+            { name: "Doughnut", price: 10.00, img: "img/donot.png" },
+            { name: "Cookies", price: 10.00, img: "img/cookies.png" },
+            
+        ];
+
+        // Render Single Place Foods Grid
+        function renderSinglePlatesGrid() {
+            const grid = document.getElementById('single-plates-grid');
+            grid.innerHTML = '';
+            singlePlatesList.forEach((item) => {
+                grid.innerHTML += `
+                    <div class="menu-item relative bg-gradient-to-br from-[#18181b] via-[#121215] to-[#09090b] rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-zinc-800/80 hover:border-gold-400 hover:shadow-gold-400/10 transition-all duration-500 flex flex-col justify-between group overflow-hidden" data-category="single-plates">
+                        <div class="absolute -right-16 -top-16 w-44 h-44 bg-gold-400/10 rounded-full blur-3xl group-hover:bg-gold-400/20 transition-all duration-700"></div>
+
+                        <div class="flex justify-between items-center mb-4 z-10">
+                            <span class="bg-gold-400/10 text-gold-400 text-[10px] sm:text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest border border-gold-400/30 shadow-sm">Single Plate</span>
+                            <div class="flex items-center space-x-1 bg-black/40 px-3.5 py-1.5 rounded-2xl border border-zinc-800">
+                                <span class="text-gold-400 font-black text-base sm:text-lg tracking-tight">₵ ${item.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+
+                        <div class="relative h-56 sm:h-64 w-full overflow-hidden rounded-2xl my-4 z-10 border border-zinc-800/60">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-40"></div>
+                            <img src="${item.img}" alt="${item.name}" class="relative h-full w-full object-cover group-hover:scale-105 transition-all duration-500 ease-out">
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800/80 z-10 flex flex-col justify-end space-y-4">
+                            <h4 class="text-xl sm:text-2xl font-black text-white tracking-wide group-hover:text-gold-400 transition-colors duration-300">${item.name}</h4>
+                            <button onclick="addToCart('${item.name}', 'Single Portion', ${item.price})" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-black py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-gold-400/20 flex items-center justify-center space-x-2 text-xs sm:text-sm uppercase tracking-wider transform active:scale-95">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Render Drinks & Minerals Grid
         function renderDrinksGrid() {
             const grid = document.getElementById('drinks-grid');
             grid.innerHTML = '';
             drinksList.forEach((drink) => {
                 grid.innerHTML += `
-                    <div class="menu-item relative bg-gradient-to-br from-[#18181b] via-[#121215] to-[#09090b] rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-zinc-800/80 hover:border-gold-400 hover:shadow-gold-400/10 transition-all duration-500 flex flex-col justify-between group overflow-hidden">
-                        <!-- Decorative ambient glow ring -->
+                    <div class="menu-item relative bg-gradient-to-br from-[#18181b] via-[#121215] to-[#09090b] rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-zinc-800/80 hover:border-gold-400 hover:shadow-gold-400/10 transition-all duration-500 flex flex-col justify-between group overflow-hidden" data-category="drinks">
                         <div class="absolute -right-16 -top-16 w-44 h-44 bg-gold-400/10 rounded-full blur-3xl group-hover:bg-gold-400/20 transition-all duration-700"></div>
 
-                        <!-- Top Tag & Pricing -->
                         <div class="flex justify-between items-center mb-4 z-10">
                             <span class="bg-gold-400/10 text-gold-400 text-[10px] sm:text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest border border-gold-400/30 shadow-sm">Ice Cold</span>
                             <div class="flex items-center space-x-1 bg-black/40 px-3.5 py-1.5 rounded-2xl border border-zinc-800">
@@ -1118,13 +1214,11 @@
                             </div>
                         </div>
 
-                        <!-- High-Impact KFS-Style Full Cover Image Container -->
                         <div class="relative h-56 sm:h-64 w-full overflow-hidden rounded-2xl my-4 z-10 border border-zinc-800/60">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-40"></div>
                             <img src="${drink.img}" alt="${drink.name}" class="relative h-full w-full object-cover group-hover:scale-105 transition-all duration-500 ease-out">
                         </div>
 
-                        <!-- Name & Action Button -->
                         <div class="pt-4 border-t border-zinc-800/80 z-10 flex flex-col justify-end space-y-4">
                             <h4 class="text-xl sm:text-2xl font-black text-white tracking-wide group-hover:text-gold-400 transition-colors duration-300">${drink.name}</h4>
                             <button onclick="addToCart('${drink.name}', 'Standard', ${drink.price})" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-black py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-gold-400/20 flex items-center justify-center space-x-2 text-xs sm:text-sm uppercase tracking-wider transform active:scale-95">
@@ -1137,9 +1231,44 @@
             });
         }
 
-        // Initialize drinks grid on load
+        // Render Pastries Grid
+        function renderPastriesGrid() {
+            const grid = document.getElementById('pastries-grid');
+            grid.innerHTML = '';
+            pastriesList.forEach((pastry) => {
+                grid.innerHTML += `
+                    <div class="menu-item relative bg-gradient-to-br from-[#18181b] via-[#121215] to-[#09090b] rounded-[2.5rem] p-6 sm:p-8 shadow-2xl border border-zinc-800/80 hover:border-gold-400 hover:shadow-gold-400/10 transition-all duration-500 flex flex-col justify-between group overflow-hidden" data-category="pastries">
+                        <div class="absolute -right-16 -top-16 w-44 h-44 bg-gold-400/10 rounded-full blur-3xl group-hover:bg-gold-400/20 transition-all duration-700"></div>
+
+                        <div class="flex justify-between items-center mb-4 z-10">
+                            <span class="bg-gold-400/10 text-gold-400 text-[10px] sm:text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest border border-gold-400/30 shadow-sm">Freshly Baked</span>
+                            <div class="flex items-center space-x-1 bg-black/40 px-3.5 py-1.5 rounded-2xl border border-zinc-800">
+                                <span class="text-gold-400 font-black text-base sm:text-lg tracking-tight">₵ ${pastry.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+
+                        <div class="relative h-56 sm:h-64 w-full overflow-hidden rounded-2xl my-4 z-10 border border-zinc-800/60">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10 opacity-40"></div>
+                            <img src="${pastry.img}" alt="${pastry.name}" class="relative h-full w-full object-cover group-hover:scale-105 transition-all duration-500 ease-out">
+                        </div>
+
+                        <div class="pt-4 border-t border-zinc-800/80 z-10 flex flex-col justify-end space-y-4">
+                            <h4 class="text-xl sm:text-2xl font-black text-white tracking-wide group-hover:text-gold-400 transition-colors duration-300">${pastry.name}</h4>
+                            <button onclick="addToCart('${pastry.name}', 'Standard', ${pastry.price})" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-black py-4 rounded-2xl transition-all duration-300 shadow-lg shadow-gold-400/20 flex items-center justify-center space-x-2 text-xs sm:text-sm uppercase tracking-wider transform active:scale-95">
+                                <i class="fa-solid fa-plus text-xs"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Initialize grids on load
         window.addEventListener('DOMContentLoaded', () => {
+            renderSinglePlatesGrid();
             renderDrinksGrid();
+            renderPastriesGrid();
         });
 
         // Menu filtering
@@ -1147,6 +1276,8 @@
             const items = document.querySelectorAll('.menu-item');
             const tabs = document.querySelectorAll('.menu-tab');
             const drinksSection = document.getElementById('drinks-section');
+            const singlePlatesSection = document.getElementById('single-plates-section');
+            const pastriesSection = document.getElementById('pastries-section');
             
             tabs.forEach(tab => {
                 tab.classList.remove('bg-gold-400', 'text-black', 'font-extrabold', 'shadow-md');
@@ -1160,18 +1291,31 @@
             }
 
             items.forEach(item => {
+                const parentSection = item.closest('#drinks-section') || item.closest('#single-plates-section') || item.closest('#pastries-section');
+                
                 if(category === 'all') {
                     item.style.display = 'flex';
                 } else if(category === 'drinks') {
                     if(item.closest('#drinks-section')) {
-                        drinksSection.style.display = 'block';
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                } else if(category === 'single-plates') {
+                    if(item.closest('#single-plates-section')) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                } else if(category === 'pastries') {
+                    if(item.closest('#pastries-section')) {
                         item.style.display = 'flex';
                     } else {
                         item.style.display = 'none';
                     }
                 } else {
-                    if(item.closest('#drinks-section')) {
-                        drinksSection.style.display = 'none';
+                    if(parentSection) {
+                        item.style.display = 'none';
                     } else if(item.getAttribute('data-category') === category) {
                         item.style.display = 'flex';
                     } else {
@@ -1180,10 +1324,27 @@
                 }
             });
 
-            if(category === 'dishes' || category === 'snacks') {
-                drinksSection.style.display = 'none';
-            } else {
+            // Toggle section wrapper visibility
+            if(category === 'all') {
+                singlePlatesSection.style.display = 'block';
                 drinksSection.style.display = 'block';
+                pastriesSection.style.display = 'block';
+            } else if(category === 'drinks') {
+                singlePlatesSection.style.display = 'none';
+                drinksSection.style.display = 'block';
+                pastriesSection.style.display = 'none';
+            } else if(category === 'single-plates') {
+                singlePlatesSection.style.display = 'block';
+                drinksSection.style.display = 'none';
+                pastriesSection.style.display = 'none';
+            } else if(category === 'pastries') {
+                singlePlatesSection.style.display = 'none';
+                drinksSection.style.display = 'none';
+                pastriesSection.style.display = 'block';
+            } else {
+                singlePlatesSection.style.display = 'none';
+                drinksSection.style.display = 'none';
+                pastriesSection.style.display = 'none';
             }
         }
 
