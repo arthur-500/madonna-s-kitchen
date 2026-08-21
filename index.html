@@ -268,7 +268,7 @@
             </h1>
             <p class="text-xs sm:text-base lg:text-lg text-zinc-300 mb-8 font-normal max-w-xl text-left leading-relaxed">Local and Continental dishes, tasty snacks, and irresistible pastries for every occasion.</p>
             
-            <div class="flex flex-col sm:flex-row gap-4 max-w-full mb-12 items-center justify-center w-full">
+            <div class="flex flex-col sm:flex-row gap-4 max-w-full mb-12 items-center justify-center w-full sm:w-auto">
                 <a href="#menu" onclick="shrinkHero()" class="bg-gold-400 hover:bg-gold-500 text-black font-extrabold px-8 py-4 rounded-2xl shadow-xl shadow-gold-400/20 transition flex items-center justify-center space-x-2.5 text-xs tracking-wider uppercase w-full sm:w-auto">
                     <i class="fa-brands fa-whatsapp text-base"></i>
                     <span>ORDER Now</span>
@@ -301,7 +301,7 @@
     </section>
 
     <!-- WE CATER FOR SECTION -->
-    <section id="catering" class="bg-cardBg py-16 px-4 border-y border-zinc-800">
+    <section id="catering" class="bg-cardBg py-16 px-4 sm:px-6 lg:px-8 border-y border-zinc-800">
         <div class="max-w-7xl mx-auto text-center">
             <span class="text-gold-400 font-extrabold text-xs tracking-[0.3em] uppercase mb-2 block">Professional Event Catering</span>
             <h2 class="text-2xl sm:text-4xl font-black text-white mb-10 tracking-tight uppercase">WE CATER FOR</h2>
@@ -343,10 +343,10 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <div class="relative">
             <div class="absolute -inset-4 bg-gold-400/10 rounded-[2.5rem] -rotate-2"></div>
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="relative rounded-3xl shadow-xl w-full object-cover h-[450px] border border-zinc-800">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Restaurant Interior" class="relative rounded-3xl shadow-xl w-full object-cover h-[350px] sm:h-[450px] border border-zinc-800">
         </div>
         <div>
             <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Our Heritage</span>
@@ -367,7 +367,7 @@
     </section>
 
     <!-- BOOK APPOINTMENT SECTION -->
-    <section id="booking" class="bg-cardBg py-24 px-4 border-y border-zinc-800">
+    <section id="booking" class="bg-cardBg py-24 px-4 sm:px-6 lg:px-8 border-y border-zinc-800">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
                 <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Reserve Your Spot</span>
@@ -421,7 +421,7 @@
     </section>
 
     <!-- MENU SECTION -->
-    <section id="menu" class="bg-cardBg py-24 px-4 border-y border-zinc-800">
+    <section id="menu" class="bg-cardBg py-24 px-4 sm:px-6 lg:px-8 border-y border-zinc-800">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Our Gastronomy</span>
@@ -438,27 +438,27 @@
             </div>
 
             <!-- MENU GRID -->
-            <div id="menu-grid" class="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+            <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 
                 <!-- Item 1: Palava Sauce -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/palava sauce kontomire.png" alt="Palava sauce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Signature</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Palava sauce</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Palava sauce</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-1-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-1-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Palava sauce', 'dish-1-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Palava sauce', 'dish-1-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -468,23 +468,23 @@
 
                 <!-- Item 2: Chicken wings stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/chicken wing stew.png" alt="Chicken wings stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Local Special</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Chicken wings stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Chicken wings stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-2-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-2-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Chicken wings stew', 'dish-2-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Chicken wings stew', 'dish-2-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -494,23 +494,23 @@
 
                 <!-- Item 3: Cassava Fish Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/cassava fish stew.png" alt="Cassava fish stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Crispy Snack</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Cassava fish stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Cassava fish stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-3-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-3-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Cassava Fish stew', 'dish-3-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Cassava Fish stew', 'dish-3-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -520,23 +520,23 @@
 
                 <!-- Item 4: Red Fish Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/red fish stew.png" alt="Red fish stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Traditional</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Red fish stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Red fish stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-4-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-4-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Red fish stew', 'dish-4-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Red fish stew', 'dish-4-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -546,23 +546,23 @@
 
                 <!-- Item 5: Turkey Wings Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/turkey wings stew.png" alt="Turkey wings stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Popular</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Turkey wings stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Turkey wings stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-5-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-5-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Turkey wings stew', 'dish-5-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Turkey wings stew', 'dish-5-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -572,23 +572,23 @@
 
                 <!-- Item 6: Fante Fante -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/fant fante stew.png" alt="Fante Fante" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Seafood</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Fante Fante</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Fante Fante</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-6-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-6-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Fante fante', 'dish-6-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Fante fante', 'dish-6-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -598,23 +598,23 @@
 
                 <!-- Item 7: Corned Beef Vegetable Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/corned beef stew.png" alt="Corned Beef vegetable stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Stew</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Corned Beef vegetable stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Corned Beef vegetable stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-7-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-7-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Corned beef vegetable stew', 'dish-7-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Corned beef vegetable stew', 'dish-7-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -624,23 +624,23 @@
 
                 <!-- Item 8: Beef Vegetable Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/vegetable beef stew.png" alt="Beef vegetable stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Hearty</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Beef vegetable stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Beef vegetable stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-8-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-8-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Beef vegetable stew', 'dish-8-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Beef vegetable stew', 'dish-8-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -650,23 +650,23 @@
 
                 <!-- Item 9: Koobi Salmon Egg Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/koobi stew.png" alt="Koobi Salmon egg stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Local Delicacy</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Koobi Salmon egg stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Koobi Salmon egg stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-9-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-9-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('koobi salmon egg stew', 'dish-9-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('koobi salmon egg stew', 'dish-9-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -676,23 +676,23 @@
 
                 <!-- Item 10: Gizzard Cabbage Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/gizzard spicy sauce.png" alt="Gizzard cabbage stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Specialty</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Gizzard cabbage stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Gizzard cabbage stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-10-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-10-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Gizzard cabbage stew', 'dish-10-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Gizzard cabbage stew', 'dish-10-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -702,23 +702,23 @@
 
                 <!-- Item 11: Goat Meat Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/goat meat stew.png" alt="Goat meat stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Premium</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Goat meat stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Goat meat stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-11-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-11-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Goat meat stew', 'dish-11-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Goat meat stew', 'dish-11-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -728,23 +728,23 @@
 
                 <!-- Item 12: Garden Eggs Stew -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="dishes">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/garden egg stew.png" alt="Garden eggs stew" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Local Favourite</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Garden eggs stew</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Garden eggs stew</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-12-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-12-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Garden agg stew', 'dish-12-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Garden agg stew', 'dish-12-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -754,23 +754,23 @@
 
                 <!-- Item 13: Spicy Gizzard Sauce -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="snacks">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/gizzard spicy sauce.png" alt="Spicy gizzard sauce" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Spicy</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Spicy gizzard sauce</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Spicy gizzard sauce</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-13-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-13-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Spicy gizzard sauce', 'dish-13-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Spicy gizzard sauce', 'dish-13-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -780,23 +780,23 @@
 
                 <!-- Item 14: Beans Stew / Aboboi -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="snacks">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/beans stew.png" alt="Beans stew/Aboboi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Healthy</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Beans stew/Aboboi</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Beans stew/Aboboi</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-14-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-14-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('Bean stew/Aboboi', 'dish-14-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('Bean stew/Aboboi', 'dish-14-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -806,23 +806,23 @@
 
                 <!-- Item 15: Vegetable Stew Only -->
                 <div class="menu-item bg-darkBg rounded-3xl shadow-sm border border-zinc-800 overflow-hidden hover:border-gold-400/50 transition duration-300 flex flex-col justify-between group" data-category="snacks">
-                    <div class="relative overflow-hidden h-36 sm:h-56">
+                    <div class="relative overflow-hidden h-48 sm:h-56">
                         <img src="img/vegetable only stew.png" alt="Vegetable Stew Only" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <span class="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black/80 backdrop-blur-md text-gold-400 text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-zinc-700">Vegetarian</span>
                     </div>
-                    <div class="p-3 sm:p-6 flex-1 flex flex-col justify-between">
+                    <div class="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                         <div>
-                            <h4 class="text-sm sm:text-xl font-bold text-white mb-1">Vegetable Stew Only</h4>
+                            <h4 class="text-base sm:text-xl font-bold text-white mb-3">Vegetable Stew Only</h4>
                         </div>
-                        <div class="space-y-2 sm:space-y-4">
-                            <div class="flex flex-col items-start bg-cardBg p-2 sm:p-3 rounded-2xl border border-zinc-800 gap-1">
+                        <div class="space-y-3 sm:space-y-4">
+                            <div class="flex flex-col items-start bg-cardBg p-3 rounded-2xl border border-zinc-800 gap-1">
                                 <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-zinc-400">Portion:</span>
-                                <select id="dish-15-size" class="bg-darkBg border border-zinc-700 rounded-xl px-2 sm:px-3 py-1.5 text-[11px] sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
+                                <select id="dish-15-size" class="bg-darkBg border border-zinc-700 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-gold-400 w-full truncate">
                                     <option value="Regular" data-price="310.00" selected>Regular (₵ 310.00)</option>
                                     <option value="Family" data-price="530.00">Family (₵ 530.00)</option>
                                 </select>
                             </div>
-                            <button onclick="addCustomToCart('vegetable stew only', 'dish-15-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-2.5 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
+                            <button onclick="addCustomToCart('vegetable stew only', 'dish-15-size')" class="w-full bg-gold-400 hover:bg-gold-500 text-black font-extrabold py-3 sm:py-3.5 rounded-2xl transition duration-200 shadow-sm flex items-center justify-center space-x-2 text-xs sm:text-sm">
                                 <i class="fa-solid fa-plus text-xs"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -875,7 +875,7 @@
     </section>
 
     <!-- GALLERY SECTION -->
-    <section id="gallery" class="py-24 px-4 max-w-7xl mx-auto">
+    <section id="gallery" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <span class="text-gold-400 font-extrabold text-sm tracking-widest uppercase mb-2 block">Visual Feast</span>
             <h2 class="text-3xl sm:text-5xl font-black text-white mb-4 tracking-tight">Our Kitchen Gallery</h2>
@@ -923,7 +923,7 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="bg-white text-zinc-900 py-24 px-4 border-y border-zinc-200">
+    <section id="testimonials" class="bg-white text-zinc-900 py-24 px-4 sm:px-6 lg:px-8 border-y border-zinc-200">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <span class="text-gold-500 font-extrabold text-sm tracking-widest uppercase mb-2 block">Customer Feedback</span>
@@ -984,8 +984,8 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contact" class="bg-darkBg text-zinc-400 py-16 px-4 border-t border-zinc-800">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+    <footer id="contact" class="bg-darkBg text-zinc-400 py-16 px-4 sm:px-6 lg:px-8 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
             <div class="space-y-4">
                 <div class="flex items-center space-x-3">
                     <span class="text-lg font-black tracking-wider text-white uppercase">MADONNA'S KITCHEN</span>
@@ -1160,7 +1160,7 @@
             { name: "Meat Pie", price: 10.00, img: "img/meatpie.png" },
             { name: "Chin Chin", price: 10.00, img: "img/chinchin.png" },
             { name: "Baked Chips ", price: 10.00, img: "img/bakedchips.png" },
-            { name: "Doughnut", price: 10.00, img: "img/Donot.png" },
+            { name: "Doughnut", price: 10.00, img: "img/donot.png" },
             { name: "Cookies", price: 10.00, img: "img/cookies.png" },
             
         ];
