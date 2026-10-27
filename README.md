@@ -4,7 +4,7 @@
 
 Madonna's Kitchen is a modern food business website showcasing our menu, story, and online ordering. Live in Accra, serving fresh local dishes daily.
 
-**Live Site:** https://your-username.github.io/madonnas-kitchen/
+**Live Site:**  https://arthur-500.github.io/madonna-s-kitchen/
 
 ---
 
@@ -34,5 +34,5 @@ Madonna's Kitchen is a modern food business website showcasing our menu, story, 
 
 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/madonnas-kitchen.git
+git clone https://arthur-500.github.io/madonna-s-kitchen.git
 cd madonnas-kitchen
